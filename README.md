@@ -1,0 +1,1 @@
+# wordpress_plugin_qr_code_generator
