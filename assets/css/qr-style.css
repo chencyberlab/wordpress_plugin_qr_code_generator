@@ -14,7 +14,7 @@
 	color-scheme: dark;
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 520px;
+	max-width: 900px;
 	margin: 1.5rem auto;
 	color: var(--rt-text);
 	font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -33,6 +33,34 @@
 	border-radius: 14px;
 	padding: 1.25rem;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.rt-qr-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+	gap: 1.25rem;
+	align-items: start;
+}
+
+.rt-qr-col {
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.rt-qr-col-left .rt-qr-input {
+	flex: 1 1 auto;
+	min-height: 200px;
+}
+
+@media (max-width: 720px) {
+	.rt-qr-grid {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+	.rt-qr-col-left .rt-qr-input {
+		min-height: 90px;
+	}
 }
 
 .rt-qr-label {
@@ -82,7 +110,7 @@
 
 /* Colors section */
 .rt-qr-colors {
-	margin-top: 1rem;
+	margin-top: 0;
 	padding: 0.9rem;
 	background: var(--rt-surface-2);
 	border: 1px solid var(--rt-border);
